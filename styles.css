@@ -1,0 +1,448 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Container */
+
+.tejas-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Header */
+
+header {
+    padding: 1rem 0;
+    padding-bottom: 20px;
+    background: #000;
+    /* margin-bottom: 20px; */
+}
+
+
+/* Logo */
+
+header .logo {
+    width: 150px;
+}
+
+
+/* Navigation */
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul li a:hover {
+    color: #1ED760;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #E133AC, #8C18D2);
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: -5% -25%;
+    width: 180%;
+    height: 160%;
+    background: url('./Assets/ThreeDot.svg') no-repeat center center;
+    opacity: 0.9;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero .hero-text {
+    max-width: 100%;
+    position: absolute;
+}
+
+.hero h1 {
+    padding: 0% 15% 0% 25%;
+    font-size: 3.7rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text a {
+    margin-top: 2%;
+}
+
+.hero-text h2 {
+    margin-top: 5%;
+    transition: transform 0.3s ease;
+}
+
+.hero-text h2:hover {
+    transform: scale(1.1);
+}
+
+.hero .btn {
+    background: #fff;
+    color: #000000;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10% 0% 0% 29%;
+}
+
+.hero .hero-image img {
+    max-width: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    margin: -2% -1% -22% 80%;
+    /* padding-top: 30px; */
+}
+
+
+/* Features Section */
+
+.features {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.features h2 {
+    padding-top: 5%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 2% auto;
+}
+
+.tejas-card {
+    flex: 1 1 calc(25% - 20px);
+    padding: 15px;
+    text-align: center;
+}
+
+.tejas-card img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.tejas-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.tejas-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* tejas-credit-card section */
+
+.tejas-credit-card {
+    height: 28rem;
+    position: relative;
+    background: linear-gradient(180deg, #B023C2, #6D0FE1);
+    text-align: center;
+}
+
+.tejas-credit-card p {
+    padding-top: 10%;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+
+/* FAQ Section */
+
+.faq-section {
+    padding: 3rem 18rem 2rem 20rem;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    margin: 0;
+    background-color: white;
+    align-items: center;
+}
+
+.faq-item {
+    overflow: hidden;
+}
+
+.faq-item:hover {
+    text-decoration: underline solid black;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 2%;
+    list-style: none;
+}
+
+.faq-question::after {
+    content: ">";
+    font-size: 2rem;
+    color: #333333;
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+    rotate: 90deg;
+}
+
+.faq-question:hover {
+    background-color: rgba(128, 128, 128, 0.397);
+}
+
+details[open] .faq-question::after {
+    transform: rotate(-180deg);
+    /* Rotate the arrow when open */
+}
+
+.faq-section h2 {
+    color: black;
+    text-align: center;
+    font-size: 2.8rem;
+    padding-bottom: 5%;
+}
+
+.faq-question a {
+    text-decoration: none;
+    color: black;
+}
+
+.faq-section hr {
+    height: 0.2rem;
+    opacity: 0.2;
+}
+
+.faq-answer {
+    padding-left: 2rem;
+    padding-top: 2%;
+    font-size: 1.2rem;
+    color: #212121;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+.faq-answer span {
+    color: #1ED760;
+    font-weight: bolder;
+}
+
+.faq-answer p {
+    padding: 5%;
+    line-height: 1.5;
+}
+
+
+/* tejas-CARD SECTION 2 */
+
+.tejas-card-2 {
+    height: 28rem;
+    position: relative;
+    background: linear-gradient(180deg, #B023C2, #6D0FE1);
+    text-align: center;
+}
+
+.tejas-card-2 p {
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 9%;
+    font-weight: bold;
+}
+
+.tejas-card-2 .tejas-btn {
+    margin-top: 2%;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+    width: 14%;
+    height: 12%;
+}
+
+.tejas-card-2 .tejas-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* Footer */
+
+footer {
+    background: #000;
+    color: #919496;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+}
+
+.tejas-footer1 {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    height: 28rem;
+}
+
+
+/* Footer Logo */
+
+.footer-logo {
+    height: 10%;
+    width: 30%;
+    margin: -18% 0 0 2%;
+}
+
+.footer-logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.footer-col-1 {
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+/* footer col 1 */
+
+.footer-col-1 ul {
+    list-style-type: none;
+}
+
+.footer-col-1 ul li {
+    gap: 5%;
+    padding-top: 10%;
+    color: rgb(255, 255, 255);
+}
+
+.footer-col-1 ul li:hover {
+    color: #1ED760;
+}
+
+.footer-col-1 h2 {
+    font-size: 1.3rem;
+    margin: 0;
+    width: 100%;
+}
+
+
+/* social icons */
+
+.footer-right {
+    display: flex;
+    gap: 1.2rem;
+    margin: 5%;
+    padding: 2%;
+}
+
+.icon {
+    background-color: rgb(100, 100, 100);
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 12%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero .hero-text {
+        max-width: 100%;
+    }
+    .feature-cards {
+        flex-direction: column;
+    }
+}
+
+.end-part ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin-left: 5%;
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.end-part ul li:hover {
+    color: #1ED760;
+}
+
+.end-part {
+    display: flex;
+    padding: 2%;
+}
+
+.end-part p {
+    float: right;
+    padding-left: 40%;
+    font-size: 80%;
+    color: grey;
+}
